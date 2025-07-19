@@ -17,13 +17,20 @@ export default {
           xl: '1280px',
         },
       },
+      colors: {
+        fontPrimary: '#333333',
+        fontSecondary: '#58656F',
+        fontTertiary: '#b6b3b3',
+        bgPrimary: '#f5f5f5',
+      },
       spacing: {
         xs: '4px',
         sm: '8px',
         md: '12px',
         lg: '16px',
         xl: '24px',
-        xxl: '32px',
+        '2xl': '32px',
+        '3xl': '64px',
       },
       fontSize: {
         '5xl': ['3.5rem', '4rem'],
