@@ -6,5 +6,7 @@
   "trailingComma": "all",
   "endOfLine": "lf",
   "semi": false,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindConfig": "./tailwind.config.ts"
 }
