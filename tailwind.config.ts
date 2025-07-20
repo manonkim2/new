@@ -21,7 +21,8 @@ export default {
         fontPrimary: '#333333',
         fontSecondary: '#58656F',
         fontTertiary: '#b6b3b3',
-        bgPrimary: '#f5f5f5',
+        bgPrimary: '#222222',
+        bgSecondary: '#414141',
       },
       spacing: {
         xs: '4px',

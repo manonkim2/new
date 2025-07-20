@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 
 const mockSaveItems = [
@@ -42,6 +43,8 @@ const mockSaveItems = [
 ]
 
 const DashboardPage = () => {
+  const router = useRouter()
+
   const [activeTag, setActiveTag] = useState<string | null>(null)
 
   const sortedItems = [...mockSaveItems].sort(
@@ -54,6 +57,10 @@ const DashboardPage = () => {
     ? sortedItems.filter((item) => item.tags.includes(activeTag))
     : sortedItems
 
+  const handleMoveEditor = () => {
+    router.push('/card/new')
+  }
+
   return (
     <div className="p-3xl w-full">
       <div className="mb-6 flex w-full justify-between">
@@ -62,7 +69,10 @@ const DashboardPage = () => {
           {/* rename, delete */}
           <button>...</button>
         </div>
-        <button className="rounded bg-blue-600 px-lg py-sm text-white transition-colors hover:bg-blue-700">
+        <button
+          className="rounded bg-blue-600 px-lg py-sm text-white transition-colors hover:bg-blue-700"
+          onClick={handleMoveEditor}
+        >
           Create Save Item
         </button>
       </div>

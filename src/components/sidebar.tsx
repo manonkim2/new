@@ -1,3 +1,6 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 // Mock data for collections
@@ -33,12 +36,18 @@ const mockCollections = [
 ]
 
 const Sidebar = () => {
+  const router = useRouter()
+
+  const handleMoveDashboard = () => {
+    router.push('/dashboard')
+  }
+
   return (
-    <div className="text-fontTertiary flex w-[256px] flex-shrink-0 flex-col bg-[#222222] p-md">
+    <aside className="text-fontTertiary bg-bgSecondary flex w-[256px] flex-shrink-0 flex-col p-md">
       {/* setting button */}
       <div className="flex h-[72px] items-center justify-center gap-sm">
         <div className="h-8 w-8 bg-amber-600">Btn</div>
-        <p> manon Workspace</p>
+        <button onClick={handleMoveDashboard}>username Workspace</button>
       </div>
 
       {/* list */}
@@ -65,7 +74,7 @@ const Sidebar = () => {
           Create new Collection
         </button>
       </div>
-    </div>
+    </aside>
   )
 }
 
